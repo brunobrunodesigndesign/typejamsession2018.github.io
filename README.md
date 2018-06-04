@@ -1,1 +1,1 @@
-# https://typejamsession2018.github.io
+# http://typejamsession2018.github.io
