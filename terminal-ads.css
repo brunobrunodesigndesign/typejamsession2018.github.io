@@ -1,0 +1,242 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    padding: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Roboto Light", "Segoe UI Web Light", "Segoe UI Light", "Segoe UI Web Regular", "Segoe UI", Helvetica, Arial, sans-serif; 
+    color: white;
+}
+
+#iframecointa {
+    height: 500px;
+    width: 400px;
+    width: auto;
+    margin-left: 50px;
+    
+    position: absolute;
+    bottom: -100px;
+    overflow: hidden;
+}
+
+
+#ifram {
+    width: 500px;
+    height: 600px;
+    margin-top: -160px;
+    
+    color: white;
+    
+}
+
+#timer {
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#demo {
+    display: flex;
+    align-self: center;
+    font-size: 110px;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: lighter;
+    align-items: center;
+    text-align: center;
+}
+
+
+header {
+    height: 58px;
+    background: #fff;
+    border-top: 4px solid #ce1126;
+    border-bottom-color: #eee;
+}
+h1, h2, h3 {
+    margin: 0;
+    text-rendering: optimizeLegibility;
+}
+h1 {
+    font-size: 2em;
+    line-height: 58px;
+    text-align: center;
+    font-weight: normal;
+}
+input[type=text], button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 1em;
+    font-weight: bolder;
+    padding: .7em 1em;
+    margin-bottom: 1em;
+    display: block;
+/*    transform: rotate(180deg);*/
+}
+button {
+    background: #e6e6e6;
+    text-shadow: 0 1px 0 #f3f3f3;
+    margin: .5em 0 2em 0;
+    width: 100%;
+}
+#chat {
+    height: 75px;
+    position: relative;
+}
+#chat i {
+    font-size: 75px;
+    position: absolute;
+
+}
+#chat input {
+    margin-left: 75px;
+    position: relative;
+    top: 15px;
+
+    width: calc(100% - 75px);
+
+}
+#main {
+    margin: 2em 1em 1em;
+}
+#main > p {
+    color: #ce1126;
+}
+
+#output {
+    width:500px; 
+    height:200px;
+    overflow:visible; 
+    align-content:flex-end;
+/*    transform: rotate(180deg);*/
+}
+
+#output p {
+    font-size: 1.2em;
+    margin: 0.6em;
+    position: absolute;
+    top: 600px;
+    color: aqua;
+}
+#output i {
+    font-size: 20px;
+    position: absolute;
+    top: -5px;
+}
+#output span {
+    position: fixed;
+    margin-left: 40px;
+    
+    color:aqua;     
+/*    transform: rotate(180deg);*/
+}
+
+/* Font Icons */
+
+@font-face {
+    font-family: 'skipop';
+    src:url('../fonts/skipop.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+#maindiv{
+    transform: rotate(-90deg);
+  overflow: hidden;
+  white-space: nowrap;
+    position: absolute;
+    margin-left: -500px;
+    top: 50vh;
+    z-index: 10;
+    font-weight: bold;
+    
+}
+
+#div1 {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+#div2 {
+  display: inline-block;
+  animation: marquee2 20s linear infinite;
+  animation-delay: 10s;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+
+
+#maindiv2{
+    transform: rotate(90deg);
+  overflow: hidden;
+  white-space: nowrap;
+    position: absolute;
+    right: -490px;;
+    top: 50vh;
+    z-index: 10;
+    font-weight: bold;
+    
+}
+
+#div12 {
+  display: inline-flex;
+  animation: marquee3 20s linear infinite;
+}
+
+#div22 {
+  display: inline-flex;
+  animation: marquee4 20s linear infinite;
+  animation-delay: 10s;
+}
+
+@keyframes marquee3 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee4 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
