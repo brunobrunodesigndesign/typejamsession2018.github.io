@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>TYPEJAM2018</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="terminal-buro.css">
+    
+    <script src="libraries/jquery-3.2.1.min.js"></script>
+    
+    
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+</style>
+    
+    
+    
+</head>
+    
+
+<body >
+    <img id="logo" src="logo.png">
+    
+    <div id="iframecointa" style="">
+    <iframe id="ifram" frameborder="0" src="index.html" scrolling="no" ></iframe>
+    </div>
+    
+    <div id="enunciado" style="">
+    <p id="desc">A vossa cidade é a capital deste país; a área metropolitana tem uma população de mais de 1,8 milhões de habitantes. A vossa cidade é um importante centro político, onde as principais instituições internacionais estão presentes. É uma sede poliglota de várias organizações públicas. Abriga um grande número de imigrantes e, de forma generalizada, a população é mais jovem que a média nacional. A arquitetura da vossa cidade é diversificada e é possível encontrar desde construções medievais a prédios pós-modernos. O ritmo da vossa cidade é delirante. Mas autoridades governativas parecem decididas a dificultar qualquer processo simples: na vossa cidade há demasiada burocracia. Para tudo são precisos inúmeros formulários e autorizações e assinaturas e declarações de responsabilidade. A papelada acumula-se, em montes, em caixas e gavetas, e os habitantes da vossa cidade perdem-se na imensidão de documentos (des)necessários. E depois as multas, e as coimas. Por escrito: porra para a burocracia.<br>
+Acham o vosso mundo precisa de mudar? Digam-nos por que é que é assim tão mau.
+
+</p>
+    </div>
+    
+    
+    
+    <div id="timer"><p id="demo"></p></div>
+    
+    <div id="maindiv">
+  <div id="div1">
+    &nbsp;ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018
+  </div>
+  <div id="div2">
+    &nbsp;ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018
+  </div>
+</div>
+    
+    <div id="maindiv2">
+  <div id="div12">
+    &nbsp;ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018
+  </div>
+  <div id="div22">
+    &nbsp;ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018  |  ORÇAMENTO PARTICIPATIVO 2018
+  </div>
+</div>
+    
+    
+    
+    
+    
+</body>
+
+    
+    <!-- Display the countdown timer in an element -->
+
+
+<script>
+    
+    $('#maindiv').width($('#div1').width());
+    $('#maindiv2').width($('#div12').width());
+    
+    $("body").css('background-color', '#111111');
+    $("#timer").show();  
+    $("#logo").hide();  
+    $("#iframecointa").show();  
+    $("#desc").show();  
+    
+// Set the date we're counting down to
+var countDownDate = new Date("Jun6, 2018 06:13:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = hours + "h" + minutes + "m" + seconds + "s";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+//    $("body").css('background-color', 'orangered');
+    $("#timer").hide(0, 'swing');  
+    $("#logo").show(100,'swing');  
+    $("#iframecointa").hide();  
+    $("#desc").hide();  
+    
+      
+  }
+}, 1000);
+</script>
+
+</html>
