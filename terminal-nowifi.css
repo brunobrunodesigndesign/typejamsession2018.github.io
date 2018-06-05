@@ -179,7 +179,7 @@ button {
   overflow: hidden;
   white-space: nowrap;
     position: absolute;
-    margin-left: -500px;
+    margin-left: -480px;
     top: 50vh;
     z-index: 10;
     font-weight: bold;
@@ -222,7 +222,7 @@ button {
   overflow: hidden;
   white-space: nowrap;
     position: absolute;
-    right: -490px;;
+    right: -470px;;
     top: 50vh;
     z-index: 10;
     font-weight: bold;
