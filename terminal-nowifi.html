@@ -8,7 +8,7 @@
     <title>TYPEJAM2018</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="terminal-nowifi.css">
     
     <script src="libraries/jquery-3.2.1.min.js"></script>
@@ -24,14 +24,17 @@
     
 
 <body >
+   <img id="logo" src="logo.png">
     
-<!--
-    <div id="iframecointa" style="">
-    <iframe id="ifram" frameborder="0" src="index.html" scrolling="no" ></iframe>
+
+    
+    <div id="enunciado" style="">
+    <p id="desc">A vossa cidade está escondida entre as montanhas. Durante metade do ano, a neve pinta de branco a paisagem; durante a outra metade é o branco das cerejeiras que convida ao afastamento. A vossa cidade tem uma vista privilegiada sobre o verde-mar, as noites são quentes; os dias compridos. As casas históricas enfileiram-se em volta das praças da cidade, e as lareiras, nas noites mais frias, transformam as janelas em candeeiros. 
+A vossa cidade situa-se a 436 metros de altitude, onde não existe rede, e o acesso à internet é limitado, o que dificulta a comunicação. A privação de wi-fi afeta em muito a vida dos habitantes da vossa cidade, que sentem, por isso, o isolamento de forma amplificada. A falta de internet tem prejudicado a própria evolução da cidade, mantendo-a noutro tempo, e adiando o chegar de informação sobre o que se passa no país e no mundo. 
+Acham o vosso mundo precisa de mudar? Digam-nos por que é que é assim tão mau.
+
+</p>
     </div>
--->
-    
-    
     
     <div id="timer"><p id="demo"></p></div>
     
@@ -72,11 +75,15 @@
     $('#maindiv').width($('#div1').width());
     $('#maindiv2').width($('#div12').width());
     
-    $("body").css('background-color', '#404040');
-    $("timer").css('display', 'flex');  
+    $("body").css('background-color', '#666666');
+    $("#timer").show();  
+    $("#logo").hide();  
+    $("#iframecointa").show();  
+    $("#enunciado").show();  
+    
     
 // Set the date we're counting down to
-var countDownDate = new Date("Jun 6, 2018 03:00:00").getTime();
+var countDownDate = new Date("Jun6, 2018 06:13:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -100,8 +107,12 @@ var x = setInterval(function() {
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
-    $("body").css('background-color', 'red');
-    $("timer").css('display', 'none');  
+//    $("body").css('background-color', 'orangered');
+    $("#timer").hide(0, 'swing');  
+      $("#iframecointa").hide();  
+    $("#enunciado").hide();  
+    $("#logo").show(100,'swing');  
+    $("#info").hide();  
   }
 }, 1000);
 </script>
