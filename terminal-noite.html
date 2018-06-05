@@ -8,8 +8,8 @@
     <title>TYPEJAM2018</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="terminal.css">
+    <link href='http://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="terminal-noite.css">
     
     <script src="libraries/jquery-3.2.1.min.js"></script>
     
@@ -25,10 +25,19 @@
 
 <body >
     
+    <img id="logo" src="logo.png">
+    
     <div id="iframecointa" style="">
     <iframe id="ifram" frameborder="0" src="index.html" scrolling="no" ></iframe>
     </div>
     
+    <div id="enunciado" style="">
+    <p id="desc">A vossa cidade é a que se localiza mais a norte do país; entre serras e penedos e tem cerca de 19 000 habitantes. Durante todo o ano, com o conhecido fenómeno ‘Sol da meia-noite’, as noites também são dia. E com a luz do sol, muito do que seria de esperar encontrar-se aberto de madrugada, não tem lugar na vossa cidade. Na vossa cidade não há descanso, não há direito a pausas, não há tempo para diversão. A ‘vida noturna’, os encontros frívolos, o tempo próprio para dançar até os pés doerem, os copos com os amigos, ver o sol nascer com a banda sonora ideal — nada disto existe. A população vive do trabalho na mina local, decidida a produzir o minério de ferro mais puro do mundo. O clima é seco e frio, a floresta é densa. A arquitectura é industrial, com estruturas em cimento que se levantam no meio da neve. <br>
+Acham o vosso mundo precisa de mudar? Digam-nos por que é que é assim tão mau.
+
+
+</p>
+    </div>
     
     <div id="timer"><p id="demo"></p></div>
     
@@ -66,10 +75,13 @@
     $('#maindiv2').width($('#div12').width());
     
     $("body").css('background-color', '#f9f9f9');
-    $("timer").css('display', 'flex');  
+    $("#timer").show();  
+    $("#logo").hide();  
+    $("#iframecointa").show();  
+    $("#desc").show();  
     
 // Set the date we're counting down to
-var countDownDate = new Date("Jun 6, 2018 03:00:00").getTime();
+var countDownDate = new Date("Jun6, 2018 06:13:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -87,14 +99,18 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("demo").innerHTML = hours + "h" + minutes + "m" + seconds + "s";
 
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
-    $("body").css('background-color', 'red');
-    $("timer").css('display', 'none');  
+//    $("body").css('background-color', 'orangered');
+    $("#timer").hide(0, 'swing');  
+    $("#logo").show(100,'swing');  
+    $("#iframecointa").hide();  
+    $("#desc").hide();  
+    
+      
   }
 }, 1000);
 </script>
