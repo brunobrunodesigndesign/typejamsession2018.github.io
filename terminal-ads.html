@@ -8,7 +8,7 @@
     <title>TYPEJAM2018</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Gorditas:700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="terminal-ads.css">
     
     <script src="libraries/jquery-3.2.1.min.js"></script>
@@ -26,24 +26,36 @@
 <body >
     
     <div id="ads">
-        <img style="position:absolute; top: 100px; left: 20px; height:200px; z-index:10000;" src="ads/ad1.jpg">
-        <img style="position:absolute; top: 140px; left: 200px; height:250px; z-index:10000;" src="ads/ad2.jpg">
-        <img style="position:absolute; top: 300px; left: 100px; height:350px; z-index:10000;" src="ads/ad3.jpg">
-        <img style="position:absolute; top: 300px; left: 1000px; height:300px; z-index:10000;" src="ads/ad4.jpg">
-        <img style="position:absolute; top: 400px; left: 450px; height:350px; z-index:10000;" src="ads/ad5.jpg">
-        <img style="position:absolute; top: 10px; right: 0px; height:150px; z-index:10000;" src="ads/ad6.png">
-        <img style="position:absolute; top: 250px; right: 50px; height:400px; z-index:10000;" src="ads/ad7.gif">
-        <img style="position:absolute; top: 150px; left: 300px; height:350px; z-index:100000;" src="ads/ad8.gif">
-        <img style="position:absolute; top: 0px; left: 250px; height:200px; z-index:1000;" src="ads/ad9.jpg">
-        <img style="position:absolute; top: 120px; right: 150px; height:200px; z-index:1000;" src="ads/ad10.jpg">
-        <img style="position:absolute; top:70%; left: 700px; height:200px; z-index:1000;"  src="ads/ad11.jpg">
+<!--        <img style="position:absolute; top: 100px; left: 20px; height:200px; z-index:10000;" src="ads/ad1.jpg">-->
+<!--        <img style="position:absolute; top: 140px; left: 200px; height:250px; z-index:10000;" src="ads/ad2.jpg">-->
+        <img style="position:absolute; top: 500px; left: 300px; height:350px; z-index:10000;" src="ads/ad3.jpg" id="ad4">
+<!--        <img style="position:absolute; top: 300px; left: 1000px; height:300px; z-index:10000;" src="ads/ad4.jpg">-->
+<!--        <img style="position:absolute; top: 400px; left: 450px; height:350px; z-index:10000;" src="ads/ad5.jpg">-->
+<!--        <img style="position:absolute; top: 10px; right: 0px; height:150px; z-index:10000;" src="ads/ad6.png">-->
+        <img style="position:absolute; top: 350px; right: 20px; height:250px; z-index:10000;" src="ads/ad7.gif" id="ad3">
+        <img style="position:absolute; top: 50px; left: 50px; height:280px; z-index:100000;" src="ads/ad8.gif" id="ad1">
+        <img style="position:absolute; top: 0px; right: 150px; height:200px; z-index:1000;" src="ads/ad9.jpg" id="ad2">
+<!--        <img style="position:absolute; top: 120px; right: 150px; height:200px; z-index:1000;" src="ads/ad10.jpg">-->
+<!--        <img style="position:absolute; top:70%; left: 700px; height:200px; z-index:1000;"  src="ads/ad11.jpg">-->
     
     
     </div>
     
     
+    <img id="logo" src="logo.png">
+    
     <div id="iframecointa" style="">
     <iframe id="ifram" frameborder="0" src="index.html" scrolling="no" ></iframe>
+    </div>
+    
+    
+    <div id="enunciado" style="">
+    <p id="desc">A vossa cidade tem 37 milhões de habitantes, o que torna na área urbana mais populosa do mundo. É hoje um importante centro financeiro e comercial do mundo. A maior parte dos seus edifícios tem mais de 10 andares e as autoridades governativas utilizam todas as superfícies como suporte publicitário, de propaganda; fazendo com que os habitantes sofram com o excesso de informação. É caso para dizer: na vossa cidade há demasiada publicidade. Os habitantes da vossa cidade não conseguem olhar para lado nenhum sem ter que enfrentar vários anúncios de uma só vez: são avalanches deles, a afetar gravemente a ansiedade e a concentração dos habitantes da vossa cidade. São montanhas de publicidade, em diferentes suportes, de todo o género, a envolver todas as pequenas empreitadas da vida quotidiana: não há já nenhuma tarefa do dia-a-dia que não seja patrocinada por uma determinada empresa ou produto.
+Acham o vosso mundo precisa de mudar? Digam-nos por que é que é assim tão mau.
+<br>
+Nota: Em todas as atividades o vosso patrocinador faz questão de ser referido, portanto lembrem-se de referir em tudo o que fizerem que são patrocinados pelos Iluminatti.
+
+</p>
     </div>
     
     
@@ -84,9 +96,13 @@
     
     $("body").css('background-color', '#111111');
     $("timer").css('display', 'flex');  
+    $("#logo").hide();  
+    $("#iframecointa").show();  
+    $("#enunciado").show();  
+    
     
 // Set the date we're counting down to
-var countDownDate = new Date("Jun 6, 2018 03:00:00").getTime();
+var countDownDate = new Date("Jun 6, 2018 06:13:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -110,13 +126,17 @@ var x = setInterval(function() {
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
-    $("body").css('background-color', 'red');
-    $("timer").css('display', 'none');  
+    $("#timer").hide(0, 'swing');  
+      $("#iframecointa").hide();  
+    $("#enunciado").hide();  
+    $("#logo").show(100,'swing'); 
   }
 }, 1000);
     
     
+//    ok
     
+//$('#ad1').fadeIn(0).delay(1000).fadeOut(500);   
     
 </script>
 
