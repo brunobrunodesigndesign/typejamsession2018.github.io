@@ -196,10 +196,20 @@ var x = setInterval(function() {
     
 <script>
     
-    var audio = new Audio('call-me-maybe.mp3');
-audio.play();
-    
-    audio.loop = true;
+    var audio = new Audio(),
+        i = 0;
+    var playlist = new Array('call-me-maybe.mp3', 'akon.mp3','american.mp3','bw.mp3','darude.mp3','friday.mp3','hey.mp3','hung.mp3','il.mp3','jb.mp3','katy.mp3','royals.mp3','sean.mp3','this.mp3','toy.mp3','triler.mp3','waka.mp3');
+
+    audio.addEventListener('ended', function() {
+        i = ++i < playlist.length ? i : 0;
+        console.log(i)
+        audio.src = playlist[i];
+        audio.play();
+    }, true);
+    audio.volume = 0.3;
+    audio.loop = false;
+    audio.src = playlist[0];
+    audio.play();
     
 </script>
     
